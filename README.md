@@ -155,6 +155,7 @@ git clone https://github.com/NinhAnhTu/Game8Rooks.git
 cd Game8Rooks
 python main.py
 
+
 Cấu trúc dự án
 8RooksAI/
 ├── main.py             # File khởi chạy chính
@@ -162,37 +163,37 @@ Cấu trúc dự án
 ├── algorithms.py       # Chứa 19 thuật toán
 └── assets/             # Ảnh quân cờ, icon
 
-Sử dụng giao diện
+---
 
-Chọn thuật toán từ các nhóm bên trái (Uninformed, Informed, Local, CSP, Adversarial, ...).
+## 💻 Sử dụng giao diện
 
-Quan sát bàn cờ trái để xem tiến trình hoạt động step-by-step (animation).
+1. **Chọn thuật toán** từ các nhóm bên trái *(Uninformed, Informed, Local, CSP, Adversarial, ...)*  
+2. **Quan sát bàn cờ trái** để xem tiến trình hoạt động step-by-step (animation).  
+3. **Xem bàn cờ phải** để thấy kết quả cuối cùng sau khi thuật toán hoàn tất.  
+4. **Theo dõi bảng thông tin** hiển thị thời gian, số bước, số nút mở rộng, giá trị `g(n)`, `h(n)`, `f(n)`, v.v.  
 
-Xem bàn cờ phải để thấy kết quả cuối cùng sau khi thuật toán hoàn tất.
+💡 *Mẹo:*  
+Bạn có thể **tạm dừng animation**, **tua nhanh**, hoặc **chạy lại** để so sánh hoạt động giữa các thuật toán.
 
-Theo dõi bảng thông tin hiển thị thời gian, số bước, số nút mở rộng, giá trị g(n), h(n), f(n), v.v.
+---
 
-💡 Mẹo:
-Bạn có thể tạm dừng animation, tua nhanh, hoặc chạy lại để so sánh quá trình hoạt động giữa các thuật toán khác nhau.
+## 🚀 Hướng phát triển
 
-Hướng phát triển
+- 🔹 **Mở rộng** sang các bài toán khác như *N-Queens*, *Sudoku*, *Knight’s Tour*, ...  
+- 🔹 **Bổ sung** thêm các thuật toán tiên tiến như *Monte Carlo Tree Search (MCTS)*, *Q-learning*, *DQN*, ...  
+- 🔹 **Cải thiện giao diện người dùng** với hiệu ứng animation mượt hơn và hiển thị trực quan hơn.  
+- 🔹 **Tích hợp tính năng so sánh tự động** giữa các thuật toán *(thời gian, hiệu quả, số nút mở rộng)*.  
+- 🔹 **Phát triển thành công cụ học tập & giảng dạy AI** trực quan, giúp sinh viên quan sát hoạt động của từng thuật toán.
 
-🔹 Mở rộng sang các bài toán khác như N-Queens, Sudoku, Knight’s Tour, ...
+---
 
-🔹 Bổ sung thêm các thuật toán tiên tiến như Monte Carlo Tree Search (MCTS), Q-learning, DQN, ...
+## 📚 Tài liệu tham khảo
 
-🔹 Cải thiện giao diện người dùng với hiệu ứng animation mượt hơn và hiển thị trực quan hơn.
+- Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach (4th ed.)*. Pearson.  
+- Pearl, J. (1984). *Heuristics: Intelligent Search Strategies for Computer Problem Solving*. Addison-Wesley.  
+- Mitchell, M. (1998). *An Introduction to Genetic Algorithms*. MIT Press.  
+- Kumar, V. (1992). *Algorithms for Constraint Satisfaction Problems: A Survey*. *AI Magazine*.  
 
-🔹 Tích hợp tính năng so sánh tự động giữa các thuật toán (thời gian, hiệu quả, số nút mở rộng).
+---
 
-🔹 Phát triển thành công cụ học tập & giảng dạy AI tương tác, giúp sinh viên quan sát trực quan cách các thuật toán tìm kiếm hoạt động.
-
-Tài liệu tham khảo
-
-Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach (4th ed.). Pearson.
-
-Pearl, J. (1984). Heuristics: Intelligent Search Strategies for Computer Problem Solving. Addison-Wesley.
-
-Mitchell, M. (1998). An Introduction to Genetic Algorithms. MIT Press.
-
-Kumar, V. (1992). Algorithms for Constraint Satisfaction Problems: A Survey. AI Magazine.
+✨ **Dự án thuộc về Nhóm 10 – 8 Rooks AI Project**
