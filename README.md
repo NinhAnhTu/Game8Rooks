@@ -1,6 +1,6 @@
 # Ứng dụng các thuật toán tìm kiếm trong trí tuệ nhân tạo vào Game 8 Rooks
 
-## 🧩 Thông tin đồ án
+## Thông tin đồ án
 - **Môn học:** Trí tuệ nhân tạo  
 - **Giảng viên:** ThS. Phan Thị Huyền Trang  
 - **Lớp học phần:** 251ARIN330585_05CLC  
@@ -32,8 +32,8 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 - Không có hai quân xe nào cùng cột  
 
 ### Quy tắc và luật chơi
-- Bàn cờ kích thước **8×8 ô**
-- Đặt **8 quân xe**
+- Bàn cờ kích thước **8×8 ô**  
+- Đặt **8 quân xe**  
 - Mỗi hàng và mỗi cột **chỉ có đúng một quân xe**
 
 ---
@@ -41,17 +41,17 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 ## Tổng quan về dự án
 
 ### Mục tiêu
-- Triển khai và so sánh hiệu quả của **19 thuật toán tìm kiếm AI**
-- Xây dựng **giao diện trực quan** minh họa quá trình hoạt động của thuật toán
+- Triển khai và so sánh hiệu quả của **19 thuật toán tìm kiếm AI**  
+- Xây dựng **giao diện trực quan** minh họa quá trình hoạt động của thuật toán  
 - Phân tích hiệu suất dựa trên:
-  - Thời gian thực thi
-  - Số nút mở rộng
-  - Chất lượng lời giải
+  - Thời gian thực thi  
+  - Số nút mở rộng  
+  - Chất lượng lời giải  
 
 ### Phạm vi
-- Bao gồm **19 thuật toán tìm kiếm** thuộc nhiều nhóm
-- Giao diện đồ họa minh họa quá trình đặt quân
-- Hệ thống đánh giá hiệu suất theo thời gian thực
+- Bao gồm **19 thuật toán tìm kiếm** thuộc nhiều nhóm  
+- Giao diện đồ họa minh họa quá trình đặt quân  
+- Hệ thống đánh giá hiệu suất theo thời gian thực  
 
 ---
 
@@ -151,49 +151,48 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 
 ### Cách chạy
 ```bash
-git clone https://github.com/your-repo/8rooks-ai.git
-cd 8rooks-ai
+git clone https://github.com/NinhAnhTu/Game8Rooks.git
+cd Game8Rooks
 python main.py
 
-### Cấu trúc dự án
+Cấu trúc dự án
 8RooksAI/
-├── main.py # File khởi chạy chính
-├── gui.py # Giao diện Tkinter
-├── algorithms.py # Chứa 19 thuật toán
-└── assets/ # Ảnh quân cờ, icon
+├── main.py             # File khởi chạy chính
+├── gui.py              # Giao diện Tkinter
+├── algorithms.py       # Chứa 19 thuật toán
+└── assets/             # Ảnh quân cờ, icon
 
+Sử dụng giao diện
 
----
+Chọn thuật toán từ các nhóm bên trái (Uninformed, Informed, Local, CSP, Adversarial, ...).
 
-## Sử dụng giao diện
+Quan sát bàn cờ trái để xem tiến trình hoạt động step-by-step (animation).
 
-1. **Chọn thuật toán** từ các nhóm bên trái (Uninformed, Informed, Local, CSP, Adversarial,...).  
-2. **Quan sát bàn cờ trái** để xem tiến trình hoạt động step-by-step (animation).  
-3. **Xem bàn cờ phải** để thấy kết quả cuối cùng sau khi thuật toán hoàn tất.  
-4. **Theo dõi bảng thông tin** hiển thị thời gian, số bước, số nút mở rộng, giá trị g(n), h(n), f(n), v.v.  
+Xem bàn cờ phải để thấy kết quả cuối cùng sau khi thuật toán hoàn tất.
 
-*Mẹo:*  
+Theo dõi bảng thông tin hiển thị thời gian, số bước, số nút mở rộng, giá trị g(n), h(n), f(n), v.v.
+
+💡 Mẹo:
 Bạn có thể tạm dừng animation, tua nhanh, hoặc chạy lại để so sánh quá trình hoạt động giữa các thuật toán khác nhau.
 
----
+Hướng phát triển
 
-## Hướng phát triển
+🔹 Mở rộng sang các bài toán khác như N-Queens, Sudoku, Knight’s Tour, ...
 
-- 🔹 **Mở rộng** sang các bài toán khác như *N-Queens*, *Sudoku*, *Knight’s Tour*,...  
-- 🔹 **Bổ sung** thêm các thuật toán tiên tiến như *Monte Carlo Tree Search (MCTS)*, *Q-learning*, *DQN*,...  
-- 🔹 **Cải thiện giao diện** người dùng với hiệu ứng animation mượt hơn và hiển thị trực quan hơn.  
-- 🔹 **Tích hợp tính năng so sánh tự động** giữa các thuật toán (thời gian, hiệu quả, số nút mở rộng).  
-- 🔹 **Phát triển thành công cụ học tập & giảng dạy AI** tương tác, giúp sinh viên quan sát trực quan cách các thuật toán tìm kiếm hoạt động.
+🔹 Bổ sung thêm các thuật toán tiên tiến như Monte Carlo Tree Search (MCTS), Q-learning, DQN, ...
 
----
+🔹 Cải thiện giao diện người dùng với hiệu ứng animation mượt hơn và hiển thị trực quan hơn.
 
-## Tài liệu tham khảo
+🔹 Tích hợp tính năng so sánh tự động giữa các thuật toán (thời gian, hiệu quả, số nút mở rộng).
 
-- Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach (4th ed.)*. Pearson.  
-- Pearl, J. (1984). *Heuristics: Intelligent Search Strategies for Computer Problem Solving*. Addison-Wesley.  
-- Mitchell, M. (1998). *An Introduction to Genetic Algorithms*. MIT Press.  
-- Kumar, V. (1992). *Algorithms for Constraint Satisfaction Problems: A Survey*. *AI Magazine*.  
+🔹 Phát triển thành công cụ học tập & giảng dạy AI tương tác, giúp sinh viên quan sát trực quan cách các thuật toán tìm kiếm hoạt động.
 
----
+Tài liệu tham khảo
 
-**Dự án thuộc về Nhóm 10 – 8 Rooks AI Project**
+Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach (4th ed.). Pearson.
+
+Pearl, J. (1984). Heuristics: Intelligent Search Strategies for Computer Problem Solving. Addison-Wesley.
+
+Mitchell, M. (1998). An Introduction to Genetic Algorithms. MIT Press.
+
+Kumar, V. (1992). Algorithms for Constraint Satisfaction Problems: A Survey. AI Magazine.
