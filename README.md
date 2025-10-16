@@ -114,34 +114,178 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 
 ## Kết quả và đánh giá
 
-### 🔹 Nhóm Uninformed
-- **BFS:** chính xác, tốn bộ nhớ  
-- **DFS:** nhanh, không tối ưu  
-- **UCS:** tối ưu chi phí, chậm  
-- **IDS:** cân bằng, duyệt lặp lại, chậm
+---
 
-### 🔹 Nhóm Informed
-- **Greedy:** nhanh, dễ sai  
-- **A\*:** tối ưu, tốn RAM  
+### 🔹 Nhóm Uninformed Search
 
-### 🔹 Nhóm Local Search
-- **Hill Climbing:** nhanh, mắc kẹt  
-- **Simulated Annealing:** thoát cực trị, duyệt nhiều trạng thái dễ bùng nổ
-- **GA:** mạnh, tốn tài nguyên  
-- **Beam Search:** hiệu quả vừa phải  
+#### **BFS**
+<p align="center">
+  <img src="gif/bfs.gif" alt="BFS demo" width="900" style="border-radius:10px;"/>
+</p>
 
-### 🔹 Nhóm Complex Environment
-- **AND-OR:** xử lý bất định tốt  
-- **POS & Belief:** mạnh nhưng nặng  
+**Đánh giá:** Chính xác, tìm lời giải tối ưu nhưng **tốn bộ nhớ**.
 
-### 🔹 Nhóm CSP
-- **Backtracking:** dễ hiểu, chậm  
-- **Forward Checking & AC3:** giảm không gian, tốn tính toán  
+#### **DFS**
+<p align="center">
+  <img src="gif/dfs.gif" alt="DFS demo" width="900" style="border-radius:10px;"/>
+</p>
 
-### 🔹 Nhóm Adversarial
-- **Minimax & Alpha-Beta:** hiệu quả cho game đối kháng, độ sâu cao làm chậm  
+**Đánh giá:** Nhanh, nhưng **không đảm bảo tối ưu**, dễ rơi vào vòng lặp.
+
+#### **UCS**
+<p align="center">
+  <img src="gif/ucs.gif" alt="UCS demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Tối ưu chi phí, nhưng **chậm hơn BFS** nếu chi phí đồng nhất.
+
+#### **DLS**
+<p align="center">
+  <img src="gif/dls.gif" alt="DLS demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Tránh vòng lặp vô hạn, nhưng **có thể bỏ lỡ lời giải**.
+
+#### **IDS**
+<p align="center">
+  <img src="gif/ids.gif" alt="IDS demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Cân bằng giữa BFS và DFS, **hiệu quả nhưng duyệt lặp lại nhiều**.
 
 ---
+
+### 🔹 Nhóm Informed Search
+
+#### **Greedy**
+<p align="center">
+  <img src="gif/greedy.gif" alt="Greedy demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Rất nhanh**, nhưng dễ **mắc kẹt cực trị địa phương**.
+
+#### **A\***
+<p align="center">
+  <img src="gif/astar.gif" alt="A* demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Tối ưu và hoàn chỉnh**, nhưng **tốn bộ nhớ và RAM**.
+
+---
+
+### 🔹 Nhóm Local Search
+
+#### **Hill Climbing**
+<p align="center">
+  <img src="gif/hill.gif" alt="Hill Climbing demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Nhanh, đơn giản, nhưng **dễ mắc kẹt cực trị địa phương**.
+
+#### **Simulated Annealing**
+<p align="center">
+  <img src="gif/sa.gif" alt="Simulated Annealing demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Có khả năng **thoát cực trị địa phương**, nhưng **tốn thời gian duyệt**.
+
+#### **Genetic Algorithm (GA)**
+<p align="center">
+  <img src="gif/ga.gif" alt="Genetic Algorithm demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Tìm lời giải tốt trong không gian lớn, nhưng **phụ thuộc tham số**.
+
+#### **Beam Search**
+<p align="center">
+  <img src="gif/beam.gif" alt="Beam Search demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Giữ k nút tốt nhất mỗi mức**, tiết kiệm bộ nhớ nhưng **dễ bỏ lỡ lời giải tối ưu**.
+
+---
+
+### 🔹 Nhóm Complex Environment
+
+#### **AND-OR Tree**
+<p align="center">
+  <img src="gif/andor.gif" alt="AND-OR Tree demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Giải được bài toán **không chắc chắn**, nhưng **độ phức tạp cao**.
+
+#### **Partially Observable**
+<p align="center">
+  <img src="gif/partially.gif" alt="Partially Observable demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Xử lý môi trường quan sát **một phần**, nhưng **bùng nổ tổ hợp**.
+
+#### **Belief State**
+<p align="center">
+  <img src="gif/belief.gif" alt="Belief State demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Giải tốt môi trường bất định**, nhưng **chi phí tính toán cao**.
+
+---
+
+### 🔹 Nhóm CSP (Constraint Satisfaction Problem)
+
+#### **Backtracking**
+<p align="center">
+  <img src="gif/backtracking.gif" alt="Backtracking demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Đơn giản**, tiết kiệm bộ nhớ nhưng **chậm nếu ràng buộc lỏng**.
+
+#### **Forward Checking**
+<p align="center">
+  <img src="gif/forward.gif" alt="Forward Checking demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** Phát hiện **xung đột sớm**, nhưng **tốn chi phí duy trì miền**.
+
+#### **AC3**
+<p align="center">
+  <img src="gif/ac3.gif" alt="AC3 demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Duy trì tính nhất quán cung**, giảm miền hiệu quả nhưng **tốn tính toán**.
+
+---
+
+### 🔹 Nhóm Adversarial Search
+
+#### **Minimax**
+<p align="center">
+  <img src="gif/mini.gif" alt="Minimax demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Tối ưu cho trò chơi đối kháng**, nhưng **rất tốn tài nguyên ở độ sâu lớn**.
+
+#### **Alpha-Beta Pruning**
+<p align="center">
+  <img src="gif/ab.gif" alt="Alpha-Beta demo" width="900" style="border-radius:10px;"/>
+</p>
+
+**Đánh giá:** **Cắt tỉa nhánh không cần thiết**, giảm đáng kể số nút duyệt so với Minimax.
+
+---
+
+## So sánh hiệu suất
+
+### Thời gian thực thi
+
+<p align="center">
+  <img src="gif/speed.png" alt="time" width="900" style="border-radius:10px;"/>
+</p>
+
+### Số nodes đã duyệt
+
+<p align="center">
+  <img src="gif/nodes.png" alt="nodes" width="900" style="border-radius:10px;"/>
+</p>
 
 ## Hướng dẫn sử dụng
 
