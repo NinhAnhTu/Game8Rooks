@@ -2,7 +2,7 @@
 
 ## Thông tin đồ án
 - **Môn học:** Trí tuệ nhân tạo  
-- **Giảng viên:** ThS. Phan Thị Huyền Trang  
+- **Giảng viên:** TS. Phan Thị Huyền Trang  
 - **Lớp học phần:** 251ARIN330585_05CLC  
 
 ### Thông tin sinh viên
