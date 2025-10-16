@@ -5,14 +5,14 @@
 - **Giảng viên:** ThS. Phan Thị Huyền Trang  
 - **Lớp học phần:** 251ARIN330585_05CLC  
 
-### Thông tin sinh viên:
-| Họ và tên        | MSSV      |
-|------------------|-----------|
-| Ninh Anh Tú      | 23110168  |
+### Thông tin sinh viên
+| Họ và tên   | MSSV      |
+|--------------|-----------|
+| Ninh Anh Tú  | 23110168  |
 
 ---
 
-## 📑 Mục lục
+## Mục lục
 1. [Tổng quan về Game 8 Rooks](#tổng-quan-về-game-8-rooks)  
 2. [Các thuật toán được sử dụng](#các-thuật-toán-được-sử-dụng)  
 3. [Kết quả và đánh giá](#kết-quả-và-đánh-giá)  
@@ -41,8 +41,8 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 ## Tổng quan về dự án
 
 ### Mục tiêu
-- Triển khai và so sánh hiệu quả của **19 thuật toán tìm kiếm AI**  
-- Xây dựng **giao diện trực quan** minh họa quá trình hoạt động của thuật toán  
+- Triển khai và so sánh hiệu quả của **19 thuật toán tìm kiếm AI**
+- Xây dựng **giao diện trực quan** minh họa quá trình hoạt động của thuật toán
 - Phân tích hiệu suất dựa trên:
   - Thời gian thực thi  
   - Số nút mở rộng  
@@ -50,7 +50,7 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 
 ### Phạm vi
 - Bao gồm **19 thuật toán tìm kiếm** thuộc nhiều nhóm  
-- Giao diện đồ họa minh họa quá trình đặt quân  
+- Giao diện đồ họa minh họa trực quan quá trình đặt quân  
 - Hệ thống đánh giá hiệu suất theo thời gian thực  
 
 ---
@@ -80,7 +80,7 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 | Thuật toán | Nguyên lý | Ưu điểm | Nhược điểm |
 |-------------|------------|----------|-------------|
 | **Hill Climbing** | Luôn chọn trạng thái tốt hơn | Nhanh, đơn giản | Mắc kẹt cực trị địa phương |
-| **Simulated Annealing** | Cho phép bước lùi có xác suất | Thoát cực trị địa phương | Phụ thuộc lịch làm nguội |
+| **Simulated Annealing** | Cho phép bước lùi có xác suất | Thoát cực trị địa phương | Phụ thuộc lịch làm nguội, duyệt nhiều rất tốn bộ nhớ |
 | **Genetic Algorithm** | Tiến hóa: chọn lọc, lai ghép, đột biến | Tìm lời giải tốt trong không gian lớn | Phụ thuộc tham số |
 | **Beam Search** | Giữ k nút tốt nhất mỗi mức | Tiết kiệm bộ nhớ | Có thể bỏ lỡ lời giải tối ưu |
 
@@ -118,7 +118,7 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 - **BFS:** chính xác, tốn bộ nhớ  
 - **DFS:** nhanh, không tối ưu  
 - **UCS:** tối ưu chi phí, chậm  
-- **IDS:** cân bằng, duyệt lặp lại  
+- **IDS:** cân bằng, duyệt lặp lại, chậm
 
 ### 🔹 Nhóm Informed
 - **Greedy:** nhanh, dễ sai  
@@ -126,7 +126,7 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 
 ### 🔹 Nhóm Local Search
 - **Hill Climbing:** nhanh, mắc kẹt  
-- **Simulated Annealing:** thoát cực trị  
+- **Simulated Annealing:** thoát cực trị, duyệt nhiều trạng thái dễ bùng nổ
 - **GA:** mạnh, tốn tài nguyên  
 - **Beam Search:** hiệu quả vừa phải  
 
@@ -147,7 +147,7 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 
 ### Yêu cầu hệ thống
 - **Python:** 3.7+  
-- **Thư viện:** `tkinter` (có sẵn)
+- **Thư viện:** `tkinter` (có sẵn trong Python)
 
 ### Cách chạy
 ```bash
@@ -155,45 +155,68 @@ git clone https://github.com/NinhAnhTu/Game8Rooks.git
 cd Game8Rooks
 python main.py
 
+```
 
-Cấu trúc dự án
+### Cấu trúc dự án
+```bash
 8RooksAI/
 ├── main.py             # File khởi chạy chính
 ├── gui.py              # Giao diện Tkinter
 ├── algorithms.py       # Chứa 19 thuật toán
 └── assets/             # Ảnh quân cờ, icon
 
----
+```
 
-## 💻 Sử dụng giao diện
+## Sử dụng giao diện
 
-1. **Chọn thuật toán** từ các nhóm bên trái *(Uninformed, Informed, Local, CSP, Adversarial, ...)*  
-2. **Quan sát bàn cờ trái** để xem tiến trình hoạt động step-by-step (animation).  
-3. **Xem bàn cờ phải** để thấy kết quả cuối cùng sau khi thuật toán hoàn tất.  
-4. **Theo dõi bảng thông tin** hiển thị thời gian, số bước, số nút mở rộng, giá trị `g(n)`, `h(n)`, `f(n)`, v.v.  
-
-💡 *Mẹo:*  
-Bạn có thể **tạm dừng animation**, **tua nhanh**, hoặc **chạy lại** để so sánh hoạt động giữa các thuật toán.
-
----
-
-## 🚀 Hướng phát triển
-
-- 🔹 **Mở rộng** sang các bài toán khác như *N-Queens*, *Sudoku*, *Knight’s Tour*, ...  
-- 🔹 **Bổ sung** thêm các thuật toán tiên tiến như *Monte Carlo Tree Search (MCTS)*, *Q-learning*, *DQN*, ...  
-- 🔹 **Cải thiện giao diện người dùng** với hiệu ứng animation mượt hơn và hiển thị trực quan hơn.  
-- 🔹 **Tích hợp tính năng so sánh tự động** giữa các thuật toán *(thời gian, hiệu quả, số nút mở rộng)*.  
-- 🔹 **Phát triển thành công cụ học tập & giảng dạy AI** trực quan, giúp sinh viên quan sát hoạt động của từng thuật toán.
+- Chọn **thuật toán** từ các nhóm bên trái (*Uninformed*, *Informed*, *Local*, *CSP*, *Adversarial*, ...).  
+- Chọn **điểm bắt đầu** ở bàn cờ nhỏ (*Start*)
+- Quan sát **bàn cờ ở giữa** để xem tiến trình hoạt động *step-by-step (animation)*.  
+- Xem **bàn cờ nhỏ bên dưới** (Goal) để thấy kết quả cuối cùng sau khi thuật toán hoàn tất.  
+- Theo dõi **bảng thông tin** hiển thị:
+  - Điểm bắt đầu (Start(X,Y))
+  - Thời gian python xử lý thuật toán (Time)
+  - Thời gian thực tế hiển thị (RunTime)
+  - Số nút mở rộng (Nodes)
+  - Các giá trị `g(n)`, `h(n)`, `f(n)`, v.v.
 
 ---
 
-## 📚 Tài liệu tham khảo
+### Mở rộng
+- Bạn có thể **tua nhanh**, hoặc **chạy lại** để so sánh quá trình hoạt động giữa các thuật toán khác nhau.
+
+---
+
+## Hướng phát triển
+
+### Mở rộng sang các bài toán khác
+- *N-Queens*, *Sudoku*, *Knight's Tour*, ...
+
+### Bổ sung thuật toán tiên tiến
+- *Monte Carlo Tree Search (MCTS)*  
+- *Q-learning*, *DQN*, ...
+
+### Cải thiện giao diện
+- Hiệu ứng animation mượt hơn  
+- Hiển thị trực quan hơn
+
+### Tính năng so sánh
+- So sánh tự động giữa các thuật toán  
+- Phân tích hiệu suất chi tiết
+
+### Phát triển công cụ học tập
+- Ứng dụng giảng dạy AI trực quan  
+- Hỗ trợ sinh viên quan sát hoạt động của thuật toán
+
+---
+
+## Tài liệu tham khảo
 
 - Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach (4th ed.)*. Pearson.  
 - Pearl, J. (1984). *Heuristics: Intelligent Search Strategies for Computer Problem Solving*. Addison-Wesley.  
 - Mitchell, M. (1998). *An Introduction to Genetic Algorithms*. MIT Press.  
-- Kumar, V. (1992). *Algorithms for Constraint Satisfaction Problems: A Survey*. *AI Magazine*.  
-
----
-
-✨ **Dự án thuộc về Nhóm 10 – 8 Rooks AI Project**
+- Kumar, V. (1992). *Algorithms for Constraint Satisfaction Problems: A Survey*. *AI Magazine*.
+- Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach* (4th ed.). Pearson.  
+- Python Software Foundation. (n.d.). *Tkinter — Python interface to Tcl/Tk*. Retrieved from https://docs.python.org/3/library/tkinter.html  
+- Barr, A., & Feigenbaum, E. A. (1981). *The Handbook of Artificial Intelligence, Volume I*. William Kaufmann.  
+- Norvig, P. (1992). *Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp*. Morgan Kaufmann.  
