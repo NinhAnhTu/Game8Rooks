@@ -273,15 +273,15 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 
 ---
 
-## So sánh hiệu suất
+### So sánh hiệu suất
 
-### Thời gian thực thi
+#### Thời gian thực thi
 
 <p align="center">
   <img src="gif/speed.png" alt="time" width="900" style="border-radius:10px;"/>
 </p>
 
-### Số nodes đã duyệt
+#### Số nodes đã duyệt
 
 <p align="center">
   <img src="gif/nodes.png" alt="nodes" width="900" style="border-radius:10px;"/>
