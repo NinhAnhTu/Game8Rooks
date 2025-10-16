@@ -284,7 +284,7 @@ Một quân xe có thể di chuyển theo **hàng ngang và hàng dọc**, do đ
 #### Số nodes đã duyệt
 
 <p align="center">
-  <img src="gif/nodes.png" alt="nodes" width="900" style="border-radius:10px;"/>
+  <img src="gif/nodess.png" alt="nodess" width="900" style="border-radius:10px;"/>
 </p>
 
 ## Hướng dẫn sử dụng
